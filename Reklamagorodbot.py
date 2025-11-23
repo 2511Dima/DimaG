@@ -2,11 +2,11 @@ from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-token = '8159560859:AAF41j2bCaG8NyENWGkg4WxunYVj--O7qR8'
+token = 'YOUR_TG_TOKEN'
 
 bot = Bot(token)
 dp = Dispatcher(bot)
-admin_chat_id = '1235798032'
+admin_chat_id = '000000000'
 
 
 @dp.message_handler(commands=['start'])
@@ -29,17 +29,18 @@ async def user_news(callback: types.CallbackQuery):
 
 @dp.message_handler(content_types=['text'])
 async def user_message(message: types.message):
-    # if message.from_user.username == 'BuyMeKoenigsegg':
+    # if message.from_user.username == 'USERNAME_TG':
         try:
             await bot.send_message(chat_id=message.reply_to_message.forward_from.id, text=('Вам пришёл ответ:\n\n' + message.text))
             await bot.send_message(chat_id=admin_chat_id, text='Ваше сообщение отправлено!')
             
         except:
             # await bot.send_message(chat_id=admin_chat_id, text='Вы не можете писать себе(')
-            if message.from_user.username != 'BuyMeKoenigsegg':
+            if message.from_user.username != 'USERNAME_TG':
                 await message.reply("Ваше сообщение отправлено, Вам скоро ответят!")
                 await bot.send_message(chat_id=admin_chat_id, text=(f'Тебе пришло новое сообщение!\n\n' + message.text + f'\n\nЧтобы ответить на него сделай "Reply/Ответ"'))
                 await message.bot.forward_message(chat_id=admin_chat_id, from_chat_id=message.from_user.id, message_id=message.message_id)
+
 
 
 
