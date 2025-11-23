@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 from aiogram import Bot, Dispatcher, executor, types
 
 
-tokenTg = '7521073097:AAEE9CoGtlyN9Cm-ccoWyTMzJKzxO9w1jzk' #the same like parser
+tokenTg = 'YOUR_TG_TOKEN'
 urlTech2 = 'https://www.technologyreview.com/topic/artificial-intelligence/feed/'
 url = 'https://www.zdnet.com/news/rss.xml'
 urlDee = 'https://www.deepmind.com/blog/rss.xml'
@@ -23,10 +23,12 @@ async def start(message: types.Message):
     titleDee = 'hfhg'
     titleTech = 'fdsf'
 
+    chat_id = 'YOUR_CHAT_ID_TG'
+    
     while True:
         time.sleep(39600)
         if getItems(urlTech2)[0] != titleTech2:
-            await bot.send_message(chat_id=-1002334201246, text=(chat(getItems(urlTech2))))
+            await bot.send_message(chat_id=-chat_id, text=(chat(getItems(urlTech2))))
             titleTech2 = getItems(urlTech2)[0]
         else:
             print('Равны')
@@ -34,7 +36,7 @@ async def start(message: types.Message):
 
 
         if getItems(url)[0] != title:
-            await bot.send_message(chat_id=-1002334201246, text=(chat(getItems(url))))
+            await bot.send_message(chat_id=-chat_id, text=(chat(getItems(url))))
             title = getItems(url)[0]
         else:
             print('Равны')
@@ -42,7 +44,7 @@ async def start(message: types.Message):
 
 
         if getItems(urlTech)[0] != titleTech:
-            await bot.send_message(chat_id=-1002334201246, text=(chat(getItems(urlTech))))
+            await bot.send_message(chat_id=-chat_id, text=(chat(getItems(urlTech))))
             titleTech = getItems(urlTech)[0]
         else:
             print('Равны')
@@ -50,7 +52,7 @@ async def start(message: types.Message):
 
 
         if getItems(urlDee)[0] != titleDee:
-            await bot.send_message(chat_id=-1002334201246, text=(chat(getItems(urlDee))))
+            await bot.send_message(chat_id=-chat_id, text=(chat(getItems(urlDee))))
             titleDee = getItems(urlDee)[0]
         else:
             print('Равны')
@@ -58,7 +60,7 @@ async def start(message: types.Message):
 
 
         if getItems(url)[0] != title:
-            await bot.send_message(chat_id=-1002334201246, text=(chat(getItems(url))))
+            await bot.send_message(chat_id=-chat_id, text=(chat(getItems(url))))
             title = getItems(url)[0]
         else:
             print('Равны')
@@ -74,18 +76,6 @@ def getItems(url):
     soup = BeautifulSoup(fullText, 'xml')  # parsing
     items = soup.find_all('item')  # search item
 
-    # items_list = []
-
-    # for item in items:
-    #     item_dict = {}
-    #     item_dict['title'] = item.title.text
-    #     item_dict['description'] = item.description.text
-    #     item_dict['link'] = item.find('link')
-    #     soup2 = BeautifulSoup(item_dict['description'], 'html.parser')
-    #     item_dict['images'] = [img['src'] for img in soup2.find_all('img')]
-    #     item_dict['pubDate'] = item.find('pubDate').text
-    #     items_list.append(item_dict)
-
     item_res = items[0].title.text, items[0].description.text, items[0].find('link').text
 
     return item_res
@@ -98,3 +88,4 @@ def chat(item_res):
 
 
 executor.start_polling(dp)
+
