@@ -2,8 +2,8 @@ import requests
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-tokenTg = '7521073097:AAEE9CoGtlyN9Cm-ccoWyTMzJKzxO9w1jzk'
-tokenVk = 'dfe7eed7dfe7eed7dfe7eed7e4dcfc3fa1ddfe7dfe7eed7b959f8f5e8e4372d62f5b60b'
+tokenTg = 'YOUR_TG_TOKEN'
+tokenVk = 'YOUR_VK_TOKEN'
 
 bot = Bot(tokenTg)
 dp = Dispatcher(bot)
@@ -53,6 +53,7 @@ async def get_domain(message: types.Message):
 
     else:
         await bot.send_message(chat_id=message.from_user.id, text='Такого сообщества не существует\n\nУзнать домен(id) сообщества Вк - /help')
+
 
 
 
