@@ -13,7 +13,9 @@ import pyautogui
 
 # Настройка драйвера 
 options = webdriver.ChromeOptions()
-options.add_extension('D:/distrib/Python/works/pythonProject/My/clicker/AvtoNMO.f0e2edb5360d85c3c7c3c4156edb6917731950e893c4d262e421dce8a8f8f869')
+options.add_extension('path/to/extention')
+#https://chromewebstore.google.com/detail/%D0%BD%D0%BC%D0%BE-%D1%80%D0%B5%D1%88%D0%B0%D1%82%D0%B5%D0%BB%D1%8C/ollgjnfckakhihfligjkmnpdbndmfepa
+
 options.add_argument('--start-maximized')  # Открытие окна браузера на полный экран
 driver = webdriver.Chrome(options=options)
 
@@ -28,11 +30,11 @@ time.sleep(5)
 
 login = driver.find_element(By.ID, 'username')
 login.clear()
-login.send_keys('152-720-548 45')
+login.send_keys('LOGIN')
 
 password = driver.find_element(By.ID, 'password')
 password.clear()
-password.send_keys('EBY7OkowUt4HuJtl')
+password.send_keys('PASSWORD')
 
 time.sleep(1)
 
@@ -53,7 +55,7 @@ time.sleep(5)
 
 
 
-items = ['Подготовка шейки матки к родам и родовозбуждение (по утвержденным клиническим рекомендациям) - 2024']
+items = ['список', 'тестов', 'для', 'прохождения']
 
 
 
@@ -194,7 +196,7 @@ for i in items:
     try:
         driver.find_element(By.XPATH, '//button[@class="quiz-buttons-primary mdc-button mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-base"]').click()
     except:
-        print('Не получилось начать рил тестирование\n\n\n\n')
+        print('Не получилось начать настоящее тестирование\n\n\n\n')
     time.sleep(10)
 
     try:
@@ -219,21 +221,21 @@ for i in items:
     try:
         driver.find_element(By.XPATH, '//button[@class="quiz-buttons-primary mdc-button mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-base"]').click()
     except:
-        print('Не получилось закончить рил тестирование\n\n\n\n')
+        print('Не получилось закончить настоящее тестирование\n\n\n\n')
 
     time.sleep(4)
 
     try:
         driver.find_element(By.XPATH, '//button[@class="mdc-button mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-base"]').click()
     except:
-        print('Не получилось подтвердить окончание рил тестирования\n\n\n\n')
+        print('Не получилось подтвердить окончание настоящего тестирования\n\n\n\n')
 
     time.sleep(4)
 
     try:
         driver.find_element(By.XPATH, '//button[@class="quiz-buttons-primary mdc-button mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-base"]').click()
     except:
-        print('Не получилось закончить рил тестирование\n\n\n\n')
+        print('Не получилось закончить настоящее тестирование\n\n\n\n')
 
     time.sleep(4)
 
@@ -252,6 +254,7 @@ for i in items:
         driver.find_element(By.CLASS_NAME, "edu-element__go-back").click()
     except:
         print('Не получилось вернуться назад\n\n\n\n')
+
 
 
 time.sleep(1000)
