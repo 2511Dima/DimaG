@@ -1,128 +1,178 @@
-# Описание к проектам:
+# Project Descriptions
+
+---
 
 ## hardClicker.py — Automated Test Passer
 
-#### Описание:
-Инструмент для автоматического прохождения онлайн тестов для врачей. Подходит для всех направлений, которым нужно проходить аккредитацию(для акушер-гинекологов, например, нужно пройти 100 тестов).
-#### Решаемая задача: 
-Экономия времени при прохождении тестов.
-#### Преимущества:
- — Проходит любой тест за 5 минут, в примере с акушер-гинекологом проходит 100 тестов за ~8 часов вместо 60 часов.
- — Самостоятельно логинится и выбирает правильные ответы с помощью расширения chrome.
- — Работает в фоновом режиме и имитирует поведение пользователя. (не нарушая политику сайта, соблюдая лимиты на время)
+### Description:
 
-#### Для использования нужно вставить:
-Путь к расширению(есть ссылка на скачивание)
-Логин и пароль для входа на сайт
-Список тестов
+A tool for automatically passing online tests for medical professionals. It can be used in different fields that require accreditation (for example, obstetricians need to pass around 100 tests).
 
-#### Последнее использование - 12.2024
+### Problem Solved:
 
+Saves time when completing tests.
 
+### Advantages:
 
-## AutoUTM_orig.py — Salebot -> Google Sheets Analytics Transfer
+* Completes any test in about 5 minutes. For example, 100 tests can be done in ~8 hours instead of 60 hours.
+* Automatically logs in and selects correct answers using a Chrome extension.
+* Works in the background and simulates user behavior (without breaking site rules and respecting time limits).
 
-#### Описание:
-Сервис переносит данные аналитики из таблицы на сайте Salebot в Google Sheets без расхода внутренней валюты сайта Salebot.
-#### Решаемая задача: 
-Автоматизация отчётности, расчёта конверсий и удобное обращение с таблицей(на сайте Salebot нельзя считать аналитику прямо в таблице и не вычислить нужные данные).
-#### Преимущества:
- — Экономия времени (около 2-ух часов при каждом подсчёте).
- — Снижение расходов путём обхода встроенных лимитов сайта Salebot.
- — Создание аналитики и визуализации.
+### Requirements:
 
-#### Для использования нужно вставить:
-ссылку на таблицу в salebot
-cookies с входом в сайт salebot
-credentials от service_account google sheets
-название google таблицы
+* Path to the extension (download link provided)
+* Login and password for the website
+* List of tests
 
-#### Последнее использование - 11.2025
+### Last Used:
 
+12.2024
 
+---
+
+## AutoUTM_orig.py — Salebot → Google Sheets Analytics Transfer
+
+### Description:
+
+This service transfers analytics data from Salebot tables to Google Sheets without using internal credits of the Salebot platform.
+
+### Problem Solved:
+
+Automates reporting, conversion calculations, and improves data handling (Salebot does not allow full analytics directly inside its tables).
+
+### Advantages:
+
+* Saves time (about 2 hours for each calculation).
+* Reduces costs by bypassing platform limits.
+* Allows analytics creation and data visualization.
+
+### Requirements:
+
+* Link to the table in Salebot
+* Cookies for Salebot login
+* Google Sheets service account credentials
+* Name of the Google Sheet
+
+### Last Used:
+
+11.2025
+
+---
 
 ## RssSpamer.py — AI News Aggregator
 
-#### Описание:
-Бот собирает новости с разных сайтов и публикует их в Telegram канал, добавляя обработку текста с помощью ИИ.
-#### Решаемая задача: 
-Автоматизация новостного контента и его обработка под целевую аудиторию канала(RAG система).
-#### Преимущества:
- — Полная автоматизация публикаций (каждые 4 часа пост).
- — Обработка новостей нейросетью.
- — Подходит для каналов с определенной тематикой.
+### Description:
 
-#### Для использования нужно вставить:
-tg-токен(с @FatherBot)
-id чата в телеграм(свой)
+A bot that collects news from different websites and posts them to a Telegram channel, adding AI-based text processing.
 
-#### Последнее использование - 07.2024
+### Problem Solved:
 
+Automates content creation and adapts news to the target audience (RAG system).
 
+### Advantages:
+
+* Fully automated posting (every 4 hours).
+* AI-based text processing.
+* Suitable for niche or themed channels.
+
+### Requirements:
+
+* Telegram bot token (from @FatherBot)
+* Telegram chat ID
+
+### Last Used:
+
+07.2024
+
+---
 
 ## Reklamagorodbot.py — Multi-Admin Support Bot
 
-#### Описание:
-Бот для управления сообщениями клиентов. Все запросы поступают в одно и то же окно для нескольких администраторов.
-#### Решаемая задача: 
-Снижение нагрузки на менеджеров(удобное управление сообщениями, не нужно переключаться между окнами клиентов) и ответ на каждое сообщение клиентов.
-#### Преимущества:
- — Поддержка нескольких администраторов с одного аккаунта.
- — Упрощённое взаимодействие с клиентами(удобное управление сообщениями клиентов).
- — Идеально подходит для некрупных бизнесов и рекламных агентств.
- 
- #### Для использования нужно вставить:
-tg-токен(с @FatherBot)
-id чата в телеграм(свой)
-username с телеграма
+### Description:
 
-#### Последнее использование - 07.2024
+A bot for managing customer messages. All requests are sent to one shared interface for multiple administrators.
 
+### Problem Solved:
 
+Reduces manager workload and simplifies communication with clients.
+
+### Advantages:
+
+* Supports multiple admins using one account.
+* Simplifies interaction with customers.
+* Good for small businesses and marketing agencies.
+
+### Requirements:
+
+* Telegram bot token (from @FatherBot)
+* Telegram chat ID
+* Telegram username
+
+### Last Used:
+
+07.2024
+
+---
 
 ## parser.py — VK Post Parser
 
-#### Описание:
-Получает последний пост из любого сообщества ВК и отправляет его вам в Telegram.
-#### Решаемая задача: 
-Автоматизация публикации постов в новостные или тематические каналы.
-#### Преимущества:
- — Полностью устраняет ручной поиск и копирование постов.
- — Можно настроить частоту отправки.
- — Полностью заменяет администратора, публикующего новости вручную.
- 
- #### Для использования нужно вставить:
-tg-токен(с @FatherBot)
-vk-токен
+### Description:
 
-#### Последнее использование - 08.2024
+Gets the latest post from any VK community and sends it to your Telegram.
 
+### Problem Solved:
 
+Automates content reposting to news or themed channels.
 
-## files_deals.py — модуль для работы с таблицами(.csv .pickle .txt)
+### Advantages:
 
-#### Описание:
-Этот файл содержит набор функций для загрузки, обработки и сохранения табличных данных из CSV-файлов. 
-#### Основные возможности:
- - загрузка нескольких CSV-файлов и объединение их в одну таблицу;
- - автоматическая замена пустых ячеек на 'None';
- - функции для получения строк и столбцов по номеру или индексу;
- - определение и установка типов данных столбцов;
- - изменение отдельных значений или целых столбцов;
- - сохранение итоговой таблицы в CSV и бинарный .pickle;
- - вспомогательные функции для фильтрации, вычислений и вывода таблицы.
+* Removes the need for manual searching and copying posts.
+* Allows setting custom update frequency.
+* Can fully replace a content manager for posting news.
 
-Файл служит простым модульным API для работы с табличными данными без использования больших библиотек вроде pandas.
+### Requirements:
 
-#### Как пользоваться:
-В конце кода в комментарии написаны функции, которые можно вызывать в любом порядке
+* Telegram bot token (from @FatherBot)
+* VK API token
 
-#### Для использования нужно вставить:
-точный путь до файлов(при необходимости поменять название файла)
+### Last Used:
 
-#### Можно использовать файлы как пример:
-Group.csv
-Group.pickle
-Group2.csv
+08.2024
 
-#### Последнее использование - 11.2025
+---
+
+## files_deals.py — Table Processing Module (.csv, .pickle, .txt)
+
+### Description:
+
+This file contains a set of functions for loading, processing, and saving tabular data from CSV files.
+
+### Main Features:
+
+* Load multiple CSV files and merge them into one table
+* Automatically replace empty values with `None`
+* Get rows and columns by index or number
+* Detect and set column data types
+* Modify single values or entire columns
+* Save results to CSV or binary `.pickle` format
+* Helper functions for filtering, calculations, and displaying data
+
+This module works as a simple API for table processing without using large libraries like pandas.
+
+### How to Use:
+
+At the end of the file, there are comments with functions that can be called in any order.
+
+### Requirements:
+
+* Exact file paths (and file names if needed)
+
+### Example Files:
+
+* `Group.csv`
+* `Group.pickle`
+* `Group2.csv`
+
+### Last Used:
+
+11.2025
